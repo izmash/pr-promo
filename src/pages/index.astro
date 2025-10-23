@@ -1,24 +1,19 @@
 ---
----
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Reality - FPS Shooter Promotion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  </head>
-  <body class="flex flex-col min-h-screen font-bebas bg-reality-gray text-reality-white">
+import bmp3 from '../assets/bmp3.png';
+import promo from '../assets/promo.mp4';
+---
+  <Layout>
     <!-- Video Hero Section -->
     <section class="relative h-lvh overflow-hidden bg-black">
       <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted>
-        <source src="/public/pr-promo.mp4" type="video/mp4">
+        <source src={promo} type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-50"></div>
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-center m-12">
-        <img src="/public/favicon.ico" alt="Project Reality logo" class="w-32 m-4">
+        <Image src="/favicon.ico" alt="Project Reality logo" width="128" height="128" class="m-4"/>
           <a href="https://www.realitymod.com/downloads" class="bg-reality-blue hover:bg-blue-600 text-reality-white md:text-2xl text-xl  py-3 px-6 rounded mb-4 transition duration-200">Download Project Reality</a>
         <div class="flex space-x-4 md:text-xl">
           <a href="https://discord.gg/tSsaU7F" class="bg-reality-gray hover:bg-gray-700 text-reality-white py-2 px-4 rounded border border-reality-white transition duration-200">Join Discord</a>
@@ -35,7 +30,7 @@
           <!-- Left Column - Graphic -->
           <div class="md:w-1/3 mb-8 md:mb-0">
             <div class="h-64 rounded-lg flex items-center justify-center">
-              <img src="/public/bmp3.png" alt="BMP3">
+              <Image src={bmp3} alt="BMP3" width={745} height={383} />
             </div>
           </div>
           <!-- Right Columns -->
@@ -77,5 +72,4 @@
         </div>
       </footer>
     </div>
-  </body>
-</html>
+  </Layout>
