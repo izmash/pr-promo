@@ -5,4 +5,5 @@ export default defineConfig({
   output: 'static',
   base: '/pr-promo/',
   integrations: [tailwind()],
+  site: 'https://izmash.github.io',
 });
