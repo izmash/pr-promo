@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 
 import bmp3 from '../assets/bmp3.png';
 import promo from '../assets/promo.mp4';
+import icon from '/public/favicon.ico';
 ---
   <Layout>
     <!-- Video Hero Section -->
@@ -13,7 +14,7 @@ import promo from '../assets/promo.mp4';
         Your browser does not support the video tag.
       </video>
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-center m-12">
-        <Image src="/favicon.ico" alt="Project Reality logo" width="128" height="128" class="m-4"/>
+        <Image src={icon} alt="Project Reality logo" width="128" height="128" class="m-4"/>
           <a href="https://www.realitymod.com/downloads" class="bg-reality-blue hover:bg-blue-600 text-reality-white md:text-2xl text-xl  py-3 px-6 rounded mb-4 transition duration-200">Download Project Reality</a>
         <div class="flex space-x-4 md:text-xl">
           <a href="https://discord.gg/tSsaU7F" class="bg-reality-gray hover:bg-gray-700 text-reality-white py-2 px-4 rounded border border-reality-white transition duration-200">Join Discord</a>
